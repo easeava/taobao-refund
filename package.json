@@ -1,0 +1,23 @@
+{
+  "name": "taobao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^77.0.0",
+    "colors": "^1.4.0",
+    "iconv-lite": "^0.5.0",
+    "inquirer": "^7.0.0",
+    "jimp": "^0.8.5",
+    "qrcode-reader": "^1.0.4",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.88.0",
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "tough-cookie-filestore": "^0.0.1"
+  }
+}
