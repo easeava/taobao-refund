@@ -1,0 +1,31 @@
+  const nextPage = async (driver) => {
+      const next = await driver.findElement(By.className('pagination-next'))
+      console.log(next.click())
+    }
+
+    const loop = async (driver) => {
+      return new Promise(resolve => {
+        try {
+          await driver.findElement(By.className('pagination-next'))
+    
+          // 获取列表订单
+          const lists = await driver.findElements(By.className('js-order-container'))
+          for (let item of lists) {
+            const str = await item.getText()
+            
+            if (str.indexOf('退款/退货') === -1) {
+              continue
+            }
+            console.log(/订单号:\s+(\d+)/.exec(str)[1])
+    
+            // const _a = await driver.findElements(By.tagName('a'))
+            // console.log(a)
+          }
+          nextPage(driver)
+        } catch (err) {
+          
+        }
+      })
+    }
+    
+    await loop(driver)
